@@ -6,20 +6,77 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		13831F6D3022928700DFD461 /* UIPortfolioWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 13831F633022928600DFD461 /* UIPortfolioWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		13831F6B3022928700DFD461 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 132D2C9330049906000C1570 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 13831F623022928500DFD461;
+			remoteInfo = "UIPortfolioWatch Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		13831F6E3022928700DFD461 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				13831F6D3022928700DFD461 /* UIPortfolioWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		132D2C9B30049906000C1570 /* UIPortfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIPortfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13831F633022928600DFD461 /* UIPortfolioWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIPortfolioWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		13831F923022987700DFD461 /* Exceptions for "UIPortfolio" folder in "UIPortfolioWatch" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Assets.xcassets,
+				Login/Items/ButtonView.swift,
+				Login/Items/ImageView.swift,
+				Login/Items/TextView.swift,
+			);
+			target = 13831F623022928500DFD461 /* UIPortfolioWatch */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		132D2C9D30049906000C1570 /* UIPortfolio */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				13831F923022987700DFD461 /* Exceptions for "UIPortfolio" folder in "UIPortfolioWatch" target */,
+			);
 			path = UIPortfolio;
+			sourceTree = "<group>";
+		};
+		13831F643022928600DFD461 /* UIPortfolioWatch */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = UIPortfolioWatch;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		132D2C9830049906000C1570 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13831F603022928500DFD461 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				132D2C9D30049906000C1570 /* UIPortfolio */,
+				13831F643022928600DFD461 /* UIPortfolioWatch */,
 				132D2C9C30049906000C1570 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				132D2C9B30049906000C1570 /* UIPortfolio.app */,
+				13831F633022928600DFD461 /* UIPortfolioWatch.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -55,10 +114,12 @@
 				132D2C9730049906000C1570 /* Sources */,
 				132D2C9830049906000C1570 /* Frameworks */,
 				132D2C9930049906000C1570 /* Resources */,
+				13831F6E3022928700DFD461 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				13831F6C3022928700DFD461 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				132D2C9D30049906000C1570 /* UIPortfolio */,
@@ -70,6 +131,28 @@
 			productReference = 132D2C9B30049906000C1570 /* UIPortfolio.app */;
 			productType = "com.apple.product-type.application";
 		};
+		13831F623022928500DFD461 /* UIPortfolioWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13831F713022928700DFD461 /* Build configuration list for PBXNativeTarget "UIPortfolioWatch" */;
+			buildPhases = (
+				13831F5F3022928500DFD461 /* Sources */,
+				13831F603022928500DFD461 /* Frameworks */,
+				13831F613022928500DFD461 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				13831F643022928600DFD461 /* UIPortfolioWatch */,
+			);
+			name = UIPortfolioWatch;
+			packageProductDependencies = (
+			);
+			productName = "UIPortfolioWatch Watch App";
+			productReference = 13831F633022928600DFD461 /* UIPortfolioWatch.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -77,11 +160,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 2640;
+				LastSwiftUpdateCheck = 2660;
 				LastUpgradeCheck = 2640;
 				TargetAttributes = {
 					132D2C9A30049906000C1570 = {
 						CreatedOnToolsVersion = 26.4.1;
+					};
+					13831F623022928500DFD461 = {
+						CreatedOnToolsVersion = 26.6;
 					};
 				};
 			};
@@ -100,12 +186,20 @@
 			projectRoot = "";
 			targets = (
 				132D2C9A30049906000C1570 /* UIPortfolio */,
+				13831F623022928500DFD461 /* UIPortfolioWatch */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		132D2C9930049906000C1570 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13831F613022928500DFD461 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +216,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		13831F5F3022928500DFD461 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		13831F6C3022928700DFD461 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 13831F623022928500DFD461 /* UIPortfolioWatch */;
+			targetProxy = 13831F6B3022928700DFD461 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		132D2CA430049908000C1570 /* Debug */ = {
@@ -331,6 +440,73 @@
 			};
 			name = Release;
 		};
+		13831F6F3022928700DFD461 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4W8M3M9C8Z;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = UIPortfolioWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = rrodriguezd.UIPortfolio;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = rrodriguezd.UIPortfolio.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 26.5;
+			};
+			name = Debug;
+		};
+		13831F703022928700DFD461 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4W8M3M9C8Z;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = UIPortfolioWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = rrodriguezd.UIPortfolio;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = rrodriguezd.UIPortfolio.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 26.5;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -348,6 +524,15 @@
 			buildConfigurations = (
 				132D2CA730049908000C1570 /* Debug */,
 				132D2CA830049908000C1570 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13831F713022928700DFD461 /* Build configuration list for PBXNativeTarget "UIPortfolioWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13831F6F3022928700DFD461 /* Debug */,
+				13831F703022928700DFD461 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
