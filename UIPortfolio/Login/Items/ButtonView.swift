@@ -11,14 +11,19 @@ import SwiftUI
 struct ButtonPrimary : View {
     
     let title : String
-    let image : String
+    let image : Any
     let action: () -> Void
     
     var body : some View {
         Button(action: action) {
             HStack {
-                if !image.isEmpty {
-                    ImageView(image: image, width: 30)
+                if image is String {
+                    if (image is String).description.isEmpty == false {
+                        ImageView(image: (image as! String), width: 30)
+                            .padding(.trailing, 10)
+                    }
+                } else {
+                    ImageSfView(image: image as! UIImage, width: 30)
                         .padding(.trailing, 10)
                 }
                 
@@ -31,6 +36,7 @@ struct ButtonPrimary : View {
             .frame(maxWidth: .infinity, alignment: .center)
                 
         }
+        .watchPlainButtonStyle()
         .padding()
         .background(
             RoundedRectangle(cornerRadius: 20, style: .continuous)

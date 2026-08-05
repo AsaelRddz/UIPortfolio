@@ -7,17 +7,17 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct LoginView: View {
     var body: some View {
         VStack {
-            ButtonPrimary(title: "test", image: "", action: {
+            ButtonPrimary(title: "Open on Iphone", image: UIImage(systemName: "iphone")!) {
                 print("test")
-            })
+            }
         }
         .padding()
     }
 }
 
 #Preview {
-    ContentView()
+    LoginView()
 }

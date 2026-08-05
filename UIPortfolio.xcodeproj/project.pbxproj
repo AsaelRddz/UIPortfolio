@@ -43,7 +43,7 @@
 		13831F923022987700DFD461 /* Exceptions for "UIPortfolio" folder in "UIPortfolioWatch" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Assets.xcassets,
+				Login/Assets.xcassets,
 				Login/Items/ButtonView.swift,
 				Login/Items/ImageView.swift,
 				Login/Items/TextView.swift,
