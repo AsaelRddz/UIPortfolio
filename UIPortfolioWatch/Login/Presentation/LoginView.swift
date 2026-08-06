@@ -10,7 +10,7 @@ import SwiftUI
 struct LoginView: View {
     var body: some View {
         VStack {
-            ButtonPrimary(title: "Open on Iphone", image: UIImage(systemName: "iphone")!) {
+            ButtonPrimary(title: "Open on Iphone", image: Image(systemName: "iphone")) {
                 print("test")
             }
         }

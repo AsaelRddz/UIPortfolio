@@ -20,7 +20,7 @@ struct LogoView: View {
                 
                 Spacer()
                 
-                ButtonPrimary(title: "Sign Up with Google", image: "logoGoogle") {
+                ButtonPrimary(title: "Sign Up with Google", image: Image("logoGoogle")) {
                     print("google")
                 }
                 .padding(.bottom, 10)

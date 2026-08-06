@@ -19,15 +19,3 @@ struct ImageView : View {
             .frame(width: width)
     }
 }
-
-struct ImageSfView : View {
-    let image : UIImage
-    let width : CGFloat
-    
-    var body : some View {
-        Image(uiImage: image)
-            .resizable()
-            .scaledToFit()
-            .frame(width: width)
-    }
-}

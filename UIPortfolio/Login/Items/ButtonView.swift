@@ -11,19 +11,17 @@ import SwiftUI
 struct ButtonPrimary : View {
     
     let title : String
-    let image : Any
+    let image : Image?
     let action: () -> Void
     
     var body : some View {
         Button(action: action) {
             HStack {
-                if image is String {
-                    if (image is String).description.isEmpty == false {
-                        ImageView(image: (image as! String), width: 30)
-                            .padding(.trailing, 10)
-                    }
-                } else {
-                    ImageSfView(image: image as! UIImage, width: 30)
+                if let image {
+                    image
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 30)
                         .padding(.trailing, 10)
                 }
                 
