@@ -16,7 +16,7 @@ struct LogoView: View {
             VStack {
                 Spacer()
                 
-                ImageView(image: "logoLogin", iconSize: 300)
+                ImageView(assetName: "logoLogin", size: ImageSize.loginLogo)
                 
                 Spacer()
                 

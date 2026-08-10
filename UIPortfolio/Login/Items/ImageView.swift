@@ -7,31 +7,34 @@
 
 import SwiftUI
 
-enum IconSize {
-    static let small: CGFloat = 14
-    static let regular: CGFloat = 20
-    static let large: CGFloat = 28
-    static let extraLarge: CGFloat = 30
+enum ImageSize {
+    static let smallIcon: CGFloat = 14
+    static let regularIcon: CGFloat = 20
+    static let largeIcon: CGFloat = 28
+    static let extraLargeIcon: CGFloat = 30
+    
+    static let watchLogo: CGFloat = 110
+    static let loginLogo: CGFloat = 300
 }
 
 struct ImageView: View {
     let image: Image
-    let iconSize: CGFloat
+    let size: CGFloat
     
-    init(image: String, iconSize: CGFloat = IconSize.extraLarge) {
-        self.image = Image(image)
-        self.iconSize = iconSize
+    init(assetName: String, size: CGFloat = ImageSize.extraLargeIcon) {
+        self.image = Image(assetName)
+        self.size = size
     }
     
-    init(image: Image, iconSize: CGFloat = IconSize.extraLarge) {
+    init(image: Image, size: CGFloat = ImageSize.extraLargeIcon) {
         self.image = image
-        self.iconSize = iconSize
+        self.size = size
     }
     
     var body: some View {
         image
             .resizable()
             .scaledToFit()
-            .frame(width: iconSize)
+            .frame(width: size)
     }
 }

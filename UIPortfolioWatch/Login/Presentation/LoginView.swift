@@ -10,12 +10,12 @@ import SwiftUI
 struct LoginView: View {
     var body: some View {
         VStack {
-            ImageView(image: Image("logoWatch"), iconSize: 110)
+            ImageView(assetName: "logoWatch", size: ImageSize.watchLogo)
             
-            ButtonView(title: "Open on Iphone", image: Image(systemName: "iphone"), iconSize: 10, font: .caption) {
+            ButtonView(title: "Open on Iphone", image: Image(systemName: "iphone"), iconSize: ImageSize.smallIcon, font: .caption) {
                 print("Open on Iphone")
             }
-            ButtonView(title: "I have an account", iconSize: 10, backgroundColor: .gray, font: .caption) {
+            ButtonView(title: "I have an account", iconSize: ImageSize.smallIcon, backgroundColor: .gray, font: .caption) {
                 print("I have an account")
             }
         }

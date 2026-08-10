@@ -24,7 +24,7 @@ struct ButtonView: View {
     init(
         title: String,
         image: Image? = nil,
-        iconSize: CGFloat = IconSize.extraLarge,
+        iconSize: CGFloat = ImageSize.extraLargeIcon,
         backgroundColor: Color = Color("primary"),
         textColor: Color = .white,
         font: Font = .body,
