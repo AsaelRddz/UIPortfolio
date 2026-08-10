@@ -39,7 +39,7 @@ struct LoginEmailView : View {
             .padding(.top, 10)
             .padding(.bottom, 10)
 
-            ButtonPrimary(title: "Sign in", image: nil, action: {
+            ButtonView(title: "Sign in", isBold: true, action: {
                 print("sign in")
             })
             Text("Forgot password?")

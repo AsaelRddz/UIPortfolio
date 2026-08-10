@@ -10,8 +10,13 @@ import SwiftUI
 struct LoginView: View {
     var body: some View {
         VStack {
-            ButtonPrimary(title: "Open on Iphone", image: Image(systemName: "iphone")) {
-                print("test")
+            ImageView(image: Image("logoWatch"), iconSize: 110)
+            
+            ButtonView(title: "Open on Iphone", image: Image(systemName: "iphone"), iconSize: 10, font: .caption) {
+                print("Open on Iphone")
+            }
+            ButtonView(title: "I have an account", iconSize: 10, backgroundColor: .gray, font: .caption) {
+                print("I have an account")
             }
         }
         .padding()

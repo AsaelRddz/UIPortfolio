@@ -47,7 +47,7 @@ struct SignUpView : View {
             
             Spacer()
             
-            ButtonPrimary(title: "Sign up", image: nil, action: {
+            ButtonView(title: "Sign up", isBold: true, action: {
                 print("sign up")
             })
             .padding(.bottom, 10)
