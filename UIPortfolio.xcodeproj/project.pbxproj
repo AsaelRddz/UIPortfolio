@@ -46,7 +46,6 @@
 				Login/Assets.xcassets,
 				Login/Items/ButtonView.swift,
 				Login/Items/ImageView.swift,
-				Login/Items/TextView.swift,
 			);
 			target = 13831F623022928500DFD461 /* UIPortfolioWatch */;
 		};

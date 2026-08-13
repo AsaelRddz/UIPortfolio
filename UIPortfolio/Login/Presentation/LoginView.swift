@@ -41,7 +41,8 @@ struct LogoView: View {
                 .padding(.bottom, 10)
                 
                 HStack(spacing: 0) {
-                    TextView("Already have an account? ")
+                    Text("Already have an account? ")
+                        .foregroundStyle(Color("gray"))
                     
                     NavigationLink("Sign in", destination: SignUpView())
                         .underline()

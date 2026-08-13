@@ -8,8 +8,26 @@
 import Foundation
 import SwiftUI
 
-struct LoginEmailView {
+struct LoginEmailView : View {
+    @State private var text = ""
+    
     var body: some View {
-        Text("Second view")
+        VStack {
+            Text("Email").frame(maxWidth: .infinity, alignment: .leading)
+            TextField("", text: $text)
+            
+            Text("password").frame(maxWidth: .infinity, alignment: .leading)
+            TextField("", text: $text)            
+            
+            Text("Remember Me").frame(maxWidth: .infinity, alignment: .leading)
+            
+            ButtonView(title: "Sign In", action: {
+                
+            })
+            
+            Text("Forgot password?")
+        }
+        .padding()
+        .navigationTitle("Login")
     }
 }

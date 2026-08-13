@@ -24,7 +24,8 @@ struct SignUpView : View {
                 .bold()
             
             HStack {
-                TextView("Already have an account? ")
+                Text("Already have an account? ")
+                    .foregroundStyle(Color("gray"))
                 
                 Button("Sign in") {
                     dismiss()
@@ -35,11 +36,12 @@ struct SignUpView : View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.bottom, 32)
                         
-            InputData(title: "Full name", text: $fullName)
-            InputData(title: "Email", text: $email, textType: .emailAddress)
-            InputData(title: "Password", text: $password, textType: .password)
+            TextFieldView(title: "Full name", text: $fullName)
+            TextFieldView(title: "Email", text: $email, textType: .emailAddress)
+            TextFieldView(title: "Password", text: $password, textType: .password)
             
-            TextView("Account type")
+            Text("Account type")
+                .foregroundStyle(Color("gray"))
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.bottom, 4)
 
