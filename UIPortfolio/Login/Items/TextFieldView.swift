@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct InputData : View {
+struct TextFieldView : View {
     
     let title : String
     // Binding connects this field to state owned by the parent view,
@@ -18,7 +18,8 @@ struct InputData : View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            TextView("\(title):")
+            Text("\(title):")
+                .foregroundStyle(Color("gray"))
             
             HStack {
                 if isPasswordVisible || textType != .password {

@@ -16,23 +16,33 @@ struct LogoView: View {
             VStack {
                 Spacer()
                 
-                ImageView(image: "logoLogin", width: 300)
+                ImageView(assetName: "logoLogin", size: ImageSize.loginLogo)
                 
                 Spacer()
                 
-                ButtonPrimary(title: "Sign Up with Google", image: "logoGoogle") {
+                ButtonView(title: "Sign Up with Google", image: Image("logoGoogle"), isBold: true) {
                     print("google")
                 }
                 .padding(.bottom, 10)
                 
-                ButtonSecondaryView(title: "Sign Up with Email") {
+                ButtonView(
+                    title: "Sign Up with Email",
+                    backgroundColor: .white,
+                    textColor: .black,
+                    isBold: true,
+                    shadowColor: Color.black.opacity(0.15),
+                    shadowRadius: 8,
+                    shadowX: 4,
+                    shadowY: 4
+                ) {
                     print("email")
                     goToDetail = true
                 }
                 .padding(.bottom, 10)
                 
                 HStack(spacing: 0) {
-                    TextView("Already have an account? ")
+                    Text("Already have an account? ")
+                        .foregroundStyle(Color("gray"))
                     
                     NavigationLink("Sign in", destination: SignUpView())
                         .underline()

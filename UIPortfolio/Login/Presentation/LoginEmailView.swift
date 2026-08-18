@@ -23,11 +23,12 @@ struct LoginEmailView : View {
                 .bold()
                 .padding(.bottom, 10)
             
-            InputData(title: "Email", text: $text, textType: .emailAddress)
-            InputData(title: "Password", text: $password, textType: .password)
+            TextFieldView(title: "Email", text: $text, textType: .emailAddress)
+            TextFieldView(title: "Password", text: $password, textType: .password)
             
             HStack {
-                TextView("Remind Me")
+                Text("Remind Me")
+                    .foregroundStyle(Color("gray"))
                 Button(action: {
                     remindMe.toggle()
                 }){
@@ -39,7 +40,7 @@ struct LoginEmailView : View {
             .padding(.top, 10)
             .padding(.bottom, 10)
 
-            ButtonPrimary(title: "Sign in", image: "", action: {
+            ButtonView(title: "Sign in", isBold: true, action: {
                 print("sign in")
             })
             Text("Forgot password?")
